@@ -682,15 +682,17 @@ int main()
   int n;
   printf("enter the number corresponding to your desired option");
   scanf("%d", &n);
+              char cityv[30];
+                char datev[10];
+              char starttime[10];   // temporary strings to store the values given by user
+              char endtime[10];
+               char gamev[20];
 
   switch (n)
   {
   case 1:
 
-              char cityv[30];
-                char datev[10];
-              char starttime[10];
-              char endtime[10];
+            
                printf("enter the city name:");
               scanf("%s", cityv);
                 printf("enter date :");
@@ -705,14 +707,12 @@ int main()
 
   case 2:
 
-            getFixturesSortedonDate(a);
+            getFixtureSortedOnDate(a);
               break;
 
   case 3:
 
-            char gamev[20];
-             char datev[10];
-             char starttime[10], endtime[10];
+          
             printf("enter name of game:");
              scanf("%s", gamev);
               printf("enter date :");
@@ -728,35 +728,32 @@ int main()
   case 4:
 
                int i;
-               char cityv[20];
+              
                    printf("enter ground number to find the UniqueSports in that ground :");
-                       scanf("%d", i);
+                       scanf("%d", &i);
                  printf("enter city name:");
                       scanf("%s", cityv);
 
-               UniqueSports(a, a[i], cityv);
+               Uniquesport(a, a[i], cityv);
                break;
 
   case 5:
 
-                        char game_n[30];
-               char date[10], starttime[10], endtime[10];
+                      
                      printf("enter the game name:");
-               scanf("%s", game_n);
+               scanf("%s", gamev);
                printf("enter date :");
-                 scanf("%s", date);
+                 scanf("%s", datev);
               printf("enter start time :");
                scanf("%s", starttime);
               printf("enter end time :");
                 scanf("%s", endtime);
 
-              FindLocationsForGameInTimeRange(a, game_n, date, starttime, endtime);
+              FindLocationsForGameInTimeRange(a, gamev, datev, starttime, endtime);
                  break;
 
   case 6:
 
-              char gamev[30];
-              char datev[10];
                printf("enter the game name:");
               scanf("%s", gamev);
              printf("enter date :");
@@ -765,8 +762,7 @@ int main()
                 break;
 
   case 7:
-               char cityv[30];
-              char datev[10];
+              
                int k;
                   printf("enter the city name:");
                 scanf("%s", cityv);
@@ -779,10 +775,7 @@ int main()
                       break;
 
   case 8:
-               char gamev[30];
-                  char datev[10];
-                  char starttime[10];
-                  char endtime[10];
+              
                printf("enter the game name:");
                  scanf("%s", gamev);
                    printf("enter date :");
