@@ -687,111 +687,115 @@ int main()
   {
   case 1:
 
-    char city[30];
-    char date[10], starttime[10], endtime[10];
-    printf("enter the city name:");
-    scanf("%s", city);
-    printf("enter date :");
-    scanf("%s", date);
-    printf("enter start time :");
-    scanf("%s", starttime);
-    printf("enter end time :");
-    scanf("%s", endtime);
+              char cityv[30];
+                char datev[10];
+              char starttime[10];
+              char endtime[10];
+               printf("enter the city name:");
+              scanf("%s", cityv);
+                printf("enter date :");
+             scanf("%s", datev);
+              printf("enter start time :");
+             scanf("%s", starttime);
+            printf("enter end time :");
+            scanf("%s", endtime);
 
-    getFixturesinCity(a, city, date, starttime, endtime);
-    break;
+           getFixturesinCity(a, cityv, datev, starttime, endtime);
+            break;
 
   case 2:
 
-    getFixturesSortedonDate(a);
-    break;
+            getFixturesSortedonDate(a);
+              break;
 
   case 3:
 
-    char game[20];
-    char date[10];
-    char starttime[10], endtime[10];
-    printf("enter name of game:");
-    scanf("%s", game);
-    printf("enter date :");
-    scanf("%s", date);
-    printf("enter starttime:");
-    scanf("%s", starttime);
-    printf("enter end time :");
-    scanf("%s", endtime);
+            char gamev[20];
+             char datev[10];
+             char starttime[10], endtime[10];
+            printf("enter name of game:");
+             scanf("%s", gamev);
+              printf("enter date :");
+               scanf("%s", datev);
+               printf("enter starttime:");
+              scanf("%s", starttime);
+              printf("enter end time :");
+             scanf("%s", endtime);
 
-    isAvailable(a, game, date, starttime, endtime);
-    break;
+               isAvailable(a, gamev, datev, starttime, endtime);
+              break;
 
   case 4:
 
-    int i;
-    char city[20];
-    printf("enter ground number to find the UniqueSports in that ground :");
-    scanf("%d", i);
-    printf("enter city name:");
-    scanf("%s", city);
+               int i;
+               char cityv[20];
+                   printf("enter ground number to find the UniqueSports in that ground :");
+                       scanf("%d", i);
+                 printf("enter city name:");
+                      scanf("%s", cityv);
 
-    UniqueSports(a, a[i], city);
-    break;
+               UniqueSports(a, a[i], cityv);
+               break;
 
   case 5:
 
-    char game_n[30];
-    char date[10], starttime[10], endtime[10];
-    printf("enter the game name:");
-    scanf("%s", game_n);
-    printf("enter date :");
-    scanf("%s", date);
-    printf("enter start time :");
-    scanf("%s", starttime);
-    printf("enter end time :");
-    scanf("%s", endtime);
+                        char game_n[30];
+               char date[10], starttime[10], endtime[10];
+                     printf("enter the game name:");
+               scanf("%s", game_n);
+               printf("enter date :");
+                 scanf("%s", date);
+              printf("enter start time :");
+               scanf("%s", starttime);
+              printf("enter end time :");
+                scanf("%s", endtime);
 
-    FindLocationsForGameInTimeRange(a, game_n, date, starttime, endtime);
-    break;
+              FindLocationsForGameInTimeRange(a, game_n, date, starttime, endtime);
+                 break;
 
   case 6:
 
-    char game[30];
-    char date[10];
-    printf("enter the game name:");
-    scanf("%s", game);
-    printf("enter date :");
-    scanf("%s", date);
-    ClashofMatches(a, game, date);
-    break;
+              char gamev[30];
+              char datev[10];
+               printf("enter the game name:");
+              scanf("%s", gamev);
+             printf("enter date :");
+              scanf("%s", datev);
+               ClashofMatches(a, gamev, datev);
+                break;
 
   case 7:
-    char city[30];
-    char date[10];
-    int k;
-    printf("enter the city name:");
-    scanf("%s", city);
-    printf("enter date :");
-    scanf("%s", date);
-    printf("enter number of matches that you want to check in the city ");
-    scanf("%d", &k);
+               char cityv[30];
+              char datev[10];
+               int k;
+                  printf("enter the city name:");
+                scanf("%s", cityv);
+                 printf("enter date :");
+                scanf("%s", datev);
+                     printf("enter number of matches that you want to check in the city ");
+               scanf("%d", &k);
 
-    GiveListofGroundshavingatlestKmatches(a, date, city, k);
-    break;
+                GiveListofGroundshavingatlestKmatches(a, datev, cityv, k);
+                      break;
 
   case 8:
-    char game[30];
-    char date[10], starttime[10], endtime[10];
-    printf("enter the game name:");
-    scanf("%s", game);
-    printf("enter date :");
-    scanf("%s", date);
-    printf("enter starting time :");
-    scanf("%s", starttime);
-    printf("enter ending time :");
-    scanf("%s", endtime);
+               char gamev[30];
+                  char datev[10];
+                  char starttime[10];
+                  char endtime[10];
+               printf("enter the game name:");
+                 scanf("%s", gamev);
+                   printf("enter date :");
+               scanf("%s", datev);
+               printf("enter starting time :");
+                   scanf("%s", starttime);
+                printf("enter ending time :");
+                  scanf("%s", endtime);
 
-    SortOnPriceForaGame(a, game, date, starttime, endtime);
+                    SortOnPriceForaGame(a, gamev, datev, starttime, endtime);
 
-    break;
-    default:
+                      break;
+  default:
        printf(" sorry we dont have that option with us");
   }
 
