@@ -834,8 +834,9 @@ void add_AudioBook(Audio_book_Tree **abt)
         scanf("%s",narrator);
         printf("\n Enter the Genre for New Audio Book ");
         scanf("%s",genre);
-
-
+        float duration;
+        printf("Enter the Duration for New Audio Book");
+        scanf("%f",duration);
         // Creating new audiobook
         Audio_book_Tree *new_ab = (Audio_book_Tree *)malloc(sizeof(Audio_book_Tree));
         new_ab->Audio_book_id = id;
@@ -843,7 +844,7 @@ void add_AudioBook(Audio_book_Tree **abt)
         strcpy(new_ab->Author, author);
         strcpy(new_ab->Narrator, narrator);
         strcpy(new_ab->Genere, genre);
-        new_ab->duration = 0;
+        new_ab->duration = duration;
         new_ab->sum_rating = 0;// It is newly created so duration and rating will be zero
         new_ab->left = NULL;
         new_ab->right = NULL;
